@@ -28,6 +28,8 @@
         android:id="@+id/button2"
         android:layout_alignBottom="@+id/button1"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:onClick="button2_click"
+        android:nestedScrollingEnabled="false" />
 
 </RelativeLayout>
