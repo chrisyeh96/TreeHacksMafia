@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
+import android.widget.Button;
 
 
 public class Home extends ActionBarActivity {
@@ -25,6 +26,10 @@ public class Home extends ActionBarActivity {
         }
     }
 
+    public void button1_click(View view) {
+        Button b1 = (Button) findViewById(R.id.button1);
+        b1.setText("Hello");
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
