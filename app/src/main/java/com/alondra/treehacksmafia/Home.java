@@ -31,6 +31,11 @@ public class Home extends ActionBarActivity {
         b1.setText("Hello");
     }
 
+    public void button2_click(View view) {
+        Button b2 = (Button) findViewById(R.id.button2);
+        b2.setText("Charlie's Button");
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
