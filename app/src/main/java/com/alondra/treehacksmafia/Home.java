@@ -1,5 +1,6 @@
 package com.alondra.treehacksmafia;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -74,7 +75,8 @@ public class Home extends ActionBarActivity {
     }
 
     public void viewRules(View view){
+        Intent intent = new Intent(this, Rules.class);
         Button b3 = (Button) findViewById(R.id.home_viewRules);
-        b3.setText("Pressed 3");
+        startActivity(intent);
     }
 }
