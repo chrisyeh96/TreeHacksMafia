@@ -1,6 +1,7 @@
 package com.alondra.treehacksmafia;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -11,6 +12,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import android.util.Log;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Home extends ActionBarActivity {
 
@@ -69,9 +86,42 @@ public class Home extends ActionBarActivity {
         b1.setText("Pressed 1");
     }
 
+    private class MyAsyncTask extends AsyncTask<String, Integer, Double> {
+        @Override
+        protected Double doInBackground(String... params) {
+            // TODO Auto-generated method stub
+            HttpClient httpClient = new DefaultHttpClient();
+            HttpPost httpPost = new HttpPost("http://10.0.2.2:3000/users/join");
+
+            //Post Data
+            List<NameValuePair> nameValuePair = new ArrayList<NameValuePair>(1);
+            nameValuePair.add(new BasicNameValuePair("name", "John"));
+
+            //Encoding POST data
+            try {
+                httpPost.setEntity(new UrlEncodedFormEntity(nameValuePair));
+            } catch (UnsupportedEncodingException e) {
+                // log exception
+                e.printStackTrace();
+            }
+
+            //making POST request.
+            try {
+                HttpResponse response = httpClient.execute(httpPost);
+                // write response to log
+                Log.d("Http Post Response:", response.toString());
+            } catch (IOException e) {
+                // Log exception
+                e.printStackTrace();
+            }
+            return null;
+        }
+    }
+
     public void joinGame(View view) {
-        Button b2 = (Button) findViewById(R.id.home_joinGame);
-        b2.setText("Pressed 2");
+        Button b = (Button) findViewById(R.id.home_joinGame);
+
+        new MyAsyncTask().execute();
     }
 
     public void viewRules(View view){
