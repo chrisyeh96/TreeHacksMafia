@@ -25,9 +25,8 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="Type game name here"
         android:id="@+id/editText"
-        android:text="Type game name here"
-        android:textColor="@color/secondary_text_default_material_light"
         android:layout_above="@+id/home_createGame"
         android:layout_centerHorizontal="true" />
 
