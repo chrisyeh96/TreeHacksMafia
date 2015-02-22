@@ -6,4 +6,5 @@
     <string name="home_view_rules">View Rules</string>
     <string name="home_create_game">Create Game</string>
     <string name="join_game">Join Game</string>
+    <string name="home_game_name_hint">Enter Game Name</string>
 </resources>

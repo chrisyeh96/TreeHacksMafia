@@ -27,7 +27,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Type game name here"
+        android:hint="@string/home_game_name_hint"
         android:id="@+id/editText"
         android:layout_above="@+id/home_createGame"
         android:layout_centerHorizontal="true" />
