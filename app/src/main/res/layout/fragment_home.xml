@@ -1,6 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -10,14 +12,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="TreeHacks 2015 Mafia"
+        android:text="@string/home_title"
         android:id="@+id/textView2"
         android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="A Game of Deception"
+        android:text="@string/home_subtitle"
         android:id="@+id/Home"
         android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true" />
@@ -33,7 +35,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Create Game"
+        android:text="@string/home_create_game"
         android:id="@+id/home_createGame"
         android:nestedScrollingEnabled="false"
         android:onClick="createGame"
@@ -44,7 +46,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Join Game"
+        android:text="@string/join_game"
         android:id="@+id/home_joinGame"
         android:onClick="joinGame"
         android:nestedScrollingEnabled="false"
@@ -56,7 +58,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="View Rules"
+        android:text="@string/home_view_rules"
         android:id="@+id/home_viewRules"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"

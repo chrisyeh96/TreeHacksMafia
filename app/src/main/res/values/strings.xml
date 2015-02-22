@@ -1,5 +1,9 @@
 <resources>
-    <string name="app_name">TreeHacksMafia</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="app_name">Mafia</string>
+    <string name="home_title">TreeHacks Mafia</string>
+    <string name="home_subtitle">A Game of Deception</string>
     <string name="action_settings">Settings</string>
+    <string name="home_view_rules">View Rules</string>
+    <string name="home_create_game">Create Game</string>
+    <string name="join_game">Join Game</string>
 </resources>
