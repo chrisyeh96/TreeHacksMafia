@@ -10,14 +10,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="TreeHacks 2015 Mafia"
+        android:text="@string/home_title"
         android:id="@+id/textView2"
         android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="A Game of Deception"
+        android:text="@string/home_subtitle"
         android:id="@+id/Home"
         android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true" />
@@ -33,9 +33,8 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Create Game"
+        android:text="@string/home_create_game"
         android:id="@+id/home_createGame"
-        android:nestedScrollingEnabled="false"
         android:onClick="createGame"
         android:layout_gravity="center"
         android:layout_centerVertical="true"
@@ -44,10 +43,9 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Join Game"
+        android:text="@string/home_join_game"
         android:id="@+id/home_joinGame"
         android:onClick="joinGame"
-        android:nestedScrollingEnabled="false"
         android:layout_gravity="center"
         android:layout_below="@+id/home_createGame"
         android:layout_alignLeft="@+id/home_createGame"
@@ -56,7 +54,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="View Rules"
+        android:text="@string/home_view_rules"
         android:id="@+id/home_viewRules"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
