@@ -1,7 +1,6 @@
 package com.alondra.treehacksmafia;
 
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,7 +8,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.os.Build;
 import android.widget.Button;
 
 
@@ -24,16 +22,6 @@ public class Home extends ActionBarActivity {
                     .add(R.id.container, new PlaceholderFragment())
                     .commit();
         }
-    }
-
-    public void button1_click(View view) {
-        Button b1 = (Button) findViewById(R.id.button1);
-        b1.setText("Hello");
-    }
-
-    public void button2_click(View view) {
-        Button b2 = (Button) findViewById(R.id.button2);
-        b2.setText("Charlie's Button");
     }
 
     @Override
@@ -72,5 +60,21 @@ public class Home extends ActionBarActivity {
             View rootView = inflater.inflate(R.layout.fragment_home, container, false);
             return rootView;
         }
+    }
+
+    // Actual code
+    public void createGame(View view) {
+        Button b1 = (Button) findViewById(R.id.home_createGame);
+        b1.setText("Pressed 1");
+    }
+
+    public void joinGame(View view) {
+        Button b2 = (Button) findViewById(R.id.home_joinGame);
+        b2.setText("Pressed 2");
+    }
+
+    public void viewRules(View view){
+        Button b3 = (Button) findViewById(R.id.home_viewRules);
+        b3.setText("Pressed 3");
     }
 }
